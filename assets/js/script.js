@@ -1,5 +1,4 @@
-// 'use strict';
-
+'use strict';
 
 
 // element toggle function
@@ -113,78 +112,33 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-// contact form variables
-// const form = document.querySelector("[data-form]");
-// const formInputs = document.querySelectorAll("[data-form-input]");
-// const formBtn = document.querySelector("[data-form-btn]");
+const form = document.getElementById("contact-form");
 
-// add event to all form input field
-// for (let i = 0; i < formInputs.length; i++) {
-//   formInputs[i].addEventListener("input", function () {
-//     // check form validation
-//     if (form.checkValidity()) {
-//       formBtn.removeAttribute("disabled");
-//     } else {
-//       formBtn.setAttribute("disabled", "");
-//     }
-//   });
-// }
-// const from_name = document.getElementById("form-sender-name")
-// const email = document.getElementById("form-sender-email")
-// const message = document.getElementById("form-sender-message")
+// Access form fields directly using IDs (more efficient):
+const senderName = document.getElementById("form-sender-name");
+const senderEmail = document.getElementById("form-sender-email");
+const message = document.getElementById("form-sender-message");
 
-// const formInputs = document.getElementsByClassName("formInputs")
-// const formBtn = document.getElementById("formBtn")
-// const form = document.getElementById("contact-form")
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
 
-// for (let i = 0; i < formInputs.length; i++) {
-//   formInputs[i].addEventListener("input", function () {
-//     // check form validation
-//     if (form.checkValidity()) {
-//       formBtn.removeAttribute("disabled");
-//     } else {
-//       formBtn.setAttribute("disabled", "");
-//     }
-//   });
-// }
+  const templateParams = {
+    from_name: senderName.value,
+    email: senderEmail.value,
+    message: message.value,
+  };
 
-// add submit event to the form
-// form.addEventListener("submit", function (event) {
-//   event.preventDefault();
-//   sendEmail(event); // call the sendEmail function when the form is submitted
-// });
-
-// EmailJS Codes for contact Form
-// function sendEmail(event) {
-//   event.preventDefault();
-
-//   emailjs.sendForm("service_vkh2ojo", "template_737wixp", event.target)
-//     .then(function(response) {
-//       console.log("Email sent successfully:", response);
-//     }, function(error) {
-//       console.error("Error sending email:", error);
-//     });
-// }
-
-
-function sendMail() {
-
-  let templateParams = {
-    // to_name: "Shajib",
-    from_name: document.getElementById("form-sender-name").value,
-    email: document.getElementById("form-sender-email").value,
-    message: document.getElementById("form-sender-message").value,
-    // form: document.getElementById("contact-form")
-    
-  }
-  emailjs.send("service_vkh2ojo", "template_0v7ywo6", templateParams)
+  emailjs
+    .send("service_vkh2ojo", "template_0v7ywo6", templateParams)
     .then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
-    },
-    (error) => {
-      console.log('FAILED...', error);
+      console.log("SUCCESS!", response.status, response.text);
+      alert("Message sent successfully!"); // Add user feedback on success
+    })
+    .catch((error) => {
+      console.error("FAILED...", error);
+      alert("An error occurred. Please try again later."); // User-friendly error message
     });
-}
+});
 
 
 // page navigation variables

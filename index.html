@@ -1183,9 +1183,7 @@
 
           <section class="contact-form">
             <h3 class="h3 form-title">Contact Form</h3>
-
-            <form class="form" id="contact-form" >
-            <!-- <form onsubmit="sendEmail(event)" class="form" id="contact-form" data-form> -->
+            <form class="form" id="contact-form">
               <div class="input-wrapper">
                 <input
                   type="text"
@@ -1196,7 +1194,7 @@
                   required
                   
                 />
-
+            
                 <input
                   type="email"
                   name="email"
@@ -1207,7 +1205,7 @@
                   
                 />
               </div>
-
+            
               <textarea
                 name="message"
                 id="form-sender-message"
@@ -1216,12 +1214,13 @@
                 required
                 
               ></textarea>
-
-              <button class="form-btn" id="formBtn" type="submit" onclick="sendMail()" >
+            
+              <button class="form-btn" type="submit">
                 <ion-icon name="paper-plane"></ion-icon>
                 <span>Send Message</span>
               </button>
             </form>
+            
           </section>
         </article>
       </div>
