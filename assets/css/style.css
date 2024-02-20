@@ -242,6 +242,7 @@ article.active {
 .article-title {
   position: relative;
   padding-bottom: 7px;
+  /* display: inline; */
 }
 
 .article-title::after {
@@ -1644,6 +1645,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-left: auto;
   }
   
+}
+
+.resume-btn {
+
 }
 
 
