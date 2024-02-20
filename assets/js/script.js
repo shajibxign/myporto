@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 
 
@@ -113,27 +113,78 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-
-
 // contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+// const form = document.querySelector("[data-form]");
+// const formInputs = document.querySelectorAll("[data-form-input]");
+// const formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// for (let i = 0; i < formInputs.length; i++) {
+//   formInputs[i].addEventListener("input", function () {
+//     // check form validation
+//     if (form.checkValidity()) {
+//       formBtn.removeAttribute("disabled");
+//     } else {
+//       formBtn.setAttribute("disabled", "");
+//     }
+//   });
+// }
+// const from_name = document.getElementById("form-sender-name")
+// const email = document.getElementById("form-sender-email")
+// const message = document.getElementById("form-sender-message")
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+// const formInputs = document.getElementsByClassName("formInputs")
+// const formBtn = document.getElementById("formBtn")
+// const form = document.getElementById("contact-form")
 
-  });
+// for (let i = 0; i < formInputs.length; i++) {
+//   formInputs[i].addEventListener("input", function () {
+//     // check form validation
+//     if (form.checkValidity()) {
+//       formBtn.removeAttribute("disabled");
+//     } else {
+//       formBtn.setAttribute("disabled", "");
+//     }
+//   });
+// }
+
+// add submit event to the form
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   sendEmail(event); // call the sendEmail function when the form is submitted
+// });
+
+// EmailJS Codes for contact Form
+// function sendEmail(event) {
+//   event.preventDefault();
+
+//   emailjs.sendForm("service_vkh2ojo", "template_737wixp", event.target)
+//     .then(function(response) {
+//       console.log("Email sent successfully:", response);
+//     }, function(error) {
+//       console.error("Error sending email:", error);
+//     });
+// }
+
+
+function sendMail() {
+
+  let templateParams = {
+    // to_name: "Shajib",
+    from_name: document.getElementById("form-sender-name").value,
+    email: document.getElementById("form-sender-email").value,
+    message: document.getElementById("form-sender-message").value,
+    // form: document.getElementById("contact-form")
+    
+  }
+  emailjs.send("service_vkh2ojo", "template_0v7ywo6", templateParams)
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    (error) => {
+      console.log('FAILED...', error);
+    });
 }
-
 
 
 // page navigation variables

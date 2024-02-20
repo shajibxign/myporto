@@ -29,6 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
   </head>
 
   <body>
@@ -613,14 +614,14 @@
               <div class="icon-box">
                 <ion-icon name="code-outline"></ion-icon>
               </div>
-          
+
               <h3 class="h3">Skills</h3>
             </div>
-          
+
             <ol class="timeline-list">
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Programming Languages</h4>
-          
+
                 <div class="timeline-item-content">
                   <div class="skills-container">
                     <div class="skill-item">C</div>
@@ -634,7 +635,7 @@
               </li>
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Frontend Technologies</h4>
-          
+
                 <div class="timeline-item-content">
                   <div class="skills-container">
                     <div class="skill-item">HTML</div>
@@ -650,10 +651,10 @@
                   </div>
                 </div>
               </li>
-          
+
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Backend and Database</h4>
-          
+
                 <div class="timeline-item-content">
                   <div class="skills-container">
                     <div class="skill-item">Node.js</div>
@@ -667,10 +668,10 @@
                   </div>
                 </div>
               </li>
-          
+
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Other Tools</h4>
-          
+
                 <div class="timeline-item-content">
                   <div class="skills-container">
                     <div class="skill-item">Redux Toolkit</div>
@@ -684,11 +685,6 @@
               </li>
             </ol>
           </section>
-          
-          
-          
-          
-
         </article>
 
         <!--
@@ -1177,7 +1173,7 @@
           <section class="mapbox" data-mapbox>
             <figure>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384951.72149751225!2d28.979950646035192!3d41.008907467647364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1sen!2str!4v1708429910757!5m2!1sen!2str"
                 width="400"
                 height="300"
                 loading="lazy"
@@ -1188,36 +1184,40 @@
           <section class="contact-form">
             <h3 class="h3 form-title">Contact Form</h3>
 
-            <form action="#" class="form" data-form>
+            <form class="form" id="contact-form" >
+            <!-- <form onsubmit="sendEmail(event)" class="form" id="contact-form" data-form> -->
               <div class="input-wrapper">
                 <input
                   type="text"
                   name="fullname"
+                  id="form-sender-name"
                   class="form-input"
                   placeholder="Full name"
                   required
-                  data-form-input
+                  
                 />
 
                 <input
                   type="email"
                   name="email"
+                  id="form-sender-email"
                   class="form-input"
                   placeholder="Email address"
                   required
-                  data-form-input
+                  
                 />
               </div>
 
               <textarea
                 name="message"
+                id="form-sender-message"
                 class="form-input"
                 placeholder="Your Message"
                 required
-                data-form-input
+                
               ></textarea>
 
-              <button class="form-btn" type="submit" disabled data-form-btn>
+              <button class="form-btn" id="formBtn" type="submit" onclick="sendMail()" >
                 <ion-icon name="paper-plane"></ion-icon>
                 <span>Send Message</span>
               </button>
@@ -1243,5 +1243,16 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "RajN7a4idFubNNrKb",
+      });
+    })();
+  </script>
   </body>
 </html>
