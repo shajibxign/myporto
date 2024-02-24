@@ -12,13 +12,13 @@ Welcome to my Personal Portfolio website! Feel free to explore my `profile`, `re
 
 ## Screenshots
 > About me
-![Home screen] <img src="https://github.com/shajibxign/myporto/blob/main/assets/images/Home-screen.png" alt="Website Screenshot" width="500" height="300">
+<img src="https://github.com/shajibxign/myporto/blob/main/assets/images/Home-screen.png" alt="Website Screenshot" width="500" >
 > My Resume
-![Resume Screen]() <img src="https://github.com/shajibxign/myporto/blob/main/assets/images/Resume_part.png" alt="Website Screenshot" width="500" height="300">
+<img src="https://github.com/shajibxign/myporto/blob/main/assets/images/Resume_part.png" alt="Website Screenshot" width="500" >
 
 > Projects
-![Projects Screen] <img src="https://github.com/shajibxign/myporto/blob/main/assets/images/Project-showcase.png" alt="Website Screenshot" width="500" height="300">
+<img src="https://github.com/shajibxign/myporto/blob/main/assets/images/Project-showcase.png" alt="Website Screenshot" width="500">
 
 > Contact Info
-![Contact Screen]()<img src="https://github.com/shajibxign/myporto/blob/main/assets/images/contact-form.png" alt="Website Screenshot" width="500" height="300">
+<img src="https://github.com/shajibxign/myporto/blob/main/assets/images/contact-form.png" alt="Website Screenshot" width="500">
 
