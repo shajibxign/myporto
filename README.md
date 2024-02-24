@@ -1,6 +1,6 @@
-# Personal Portfolio Website
+# MY Personal Website
 
-Welcome to my Personal Portfolio website! Feel free to explore my profile, resume, experience, skillset, and contact information.
+Welcome to my Personal Portfolio website! Feel free to explore my `profile`, `resume`, `experience`, `skillset`, and `contact information`.
 
 ## Website Link
 
