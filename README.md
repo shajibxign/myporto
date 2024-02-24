@@ -13,6 +13,7 @@ Welcome to my Personal Portfolio website! Feel free to explore my `profile`, `re
 ## Screenshots
 > About me
 <img src="https://github.com/shajibxign/myporto/blob/main/assets/images/Home-screen.png" alt="Website Screenshot" width="500" >
+
 > My Resume
 <img src="https://github.com/shajibxign/myporto/blob/main/assets/images/Resume_part.png" alt="Website Screenshot" width="500" >
 
